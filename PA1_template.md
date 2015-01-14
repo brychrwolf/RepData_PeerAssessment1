@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. These type of devices are part of the "quantified self" movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
 
@@ -41,7 +46,7 @@ names(totStepsPerDay) <- c("date", "totSteps")
 hist(totStepsPerDay$totSteps, main="Total Steps Taken Each Day", xlab="Steps Taken")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 2. Calculate and report the mean and median total number of steps taken per day
 
@@ -77,7 +82,7 @@ plot(main="Average Daily Activity Pattern",
      type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -133,7 +138,7 @@ names(totStepsPerDay) <- c("date", "totSteps")
 hist(totStepsPerDay$totSteps, main="Total Steps Taken Each Day (Imputed)", xlab="Steps Taken")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
 
 ```r
 mean(totStepsPerDay$totSteps, na.rm=TRUE)
@@ -187,4 +192,4 @@ xyplot(meanSteps ~ interval|dayType,
            layout=c(1,2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
